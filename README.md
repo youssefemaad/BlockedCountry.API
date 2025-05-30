@@ -119,38 +119,3 @@ The project uses AutoMapper to map between domain models and DTOs. The mapping p
 4. Repository layer handles data operations
 5. Results are mapped back using AutoMapper
 6. Response is returned to the client
-
-## Getting Started
-
-### Prerequisites
-
-- .NET 8.0 SDK or later
-
-### Running the Application
-
-1. Clone the repository
-2. Navigate to the project directory
-3. Run `dotnet build` to build the project
-4. Run `dotnet run --project BlockedCountriesAPI/BlockedCountriesAPI.csproj` to start the API
-
-### API Documentation
-
-Once running, Swagger documentation is available at:
-
-```
-https://localhost:5001/swagger
-```
-
-## Implementation Details
-
-### In-Memory Storage
-
-The current implementation uses in-memory repositories for storing blocked countries and logs. This can be extended to use persistent storage by implementing the respective repository interfaces.
-
-### Country Identification
-
-The system identifies countries using standard two-letter country codes (ISO 3166-1 alpha-2).
-
-### Temporal Blocks
-
-Countries can be blocked temporarily by specifying a duration. After the duration expires, the block is automatically removed by the cleanup service.
